@@ -12,7 +12,7 @@ FTP_URL=ftp://${3:-localhost}
 docker run --rm \
   vibioh/ftp:latest \
   ncftpls -u ${FTP_USER} \
-        -p ${FTP_PASS} \
-        -la \
-        ${FTP_URL}
+          -p ${FTP_PASS} \
+          -la \
+          ${FTP_URL}
 
