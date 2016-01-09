@@ -9,4 +9,3 @@ RUN apk --update add ncftp \
 
 WORKDIR ${CWD}
 VOLUME ${CWD}
-

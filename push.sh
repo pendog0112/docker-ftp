@@ -10,7 +10,7 @@ FTP_PASS=${2:-password}
 FTP_URL=${3:-localhost}
 FTP_CWD=${4:-`realpath ./`}
 
-shift 4 
+shift 4
 
 docker run --rm \
   -v ${FTP_CWD}:/usr/src \
@@ -20,4 +20,3 @@ docker run --rm \
            ${FTP_URL} \
            / \
            $@
-

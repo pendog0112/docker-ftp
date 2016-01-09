@@ -15,4 +15,3 @@ docker run --rm \
           -p ${FTP_PASS} \
           -la \
           ${FTP_URL}
-
