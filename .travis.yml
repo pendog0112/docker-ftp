@@ -2,8 +2,8 @@ sudo: required
 services:
 - docker
 script:
-- docker build -t vibioh/ftp .
+- docker build -t ${DOCKER_USER}/ftp .
 - docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-- docker push vibioh/ftp
+- docker push ${DOCKER_USER}/ftp
 notifications:
   email: false
