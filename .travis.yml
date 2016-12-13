@@ -1,9 +1,11 @@
 sudo: required
 services:
 - docker
-script:
-- docker build -t ${DOCKER_USER}/ftp .
-- docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-- docker push ${DOCKER_USER}/ftp
+script: |
+  docker build -t ${DOCKER_USER}/ftp .
+after_success: |
+  if [ "${TRAVIS_BRANCH}" == "master" ]; then
+    docker login -u=${DOCKER_USER} -p=${DOCKER_PASS} && docker push ${DOCKER_USER}/ftp
+  fi
 notifications:
   email: false
