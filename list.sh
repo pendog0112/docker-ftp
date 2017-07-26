@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 if [ "${#}" -eq 0 ]; then
   echo Usage: list.sh [user] [pass] [url]
